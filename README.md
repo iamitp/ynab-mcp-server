@@ -1,5 +1,7 @@
 # YNAB MCP Server
 
+[![SafeSkill 93/100](https://img.shields.io/badge/SafeSkill-93%2F100_Verified%20Safe-brightgreen)](https://safeskill.dev/scan/iamitp-ynab-mcp-server)
+
 Connect your [YNAB](https://www.ynab.com) budget directly to Claude AI. Ask questions about your finances in natural language — balances, spending, categories, transactions, and more.
 
 ## What you can ask Claude
