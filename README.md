@@ -75,6 +75,30 @@ Then add your URL to claude.ai as a custom connector.
 - TypeScript + Express
 - OAuth 2.0 with PKCE
 
+## Troubleshooting
+
+**"Session not found — please re-authenticate"**
+Your session expired (sessions last 7 days). Disconnect and reconnect the integration in Claude.ai Settings → Connectors.
+
+**"Authorization Required" loop**
+The YNAB OAuth app may be in Restricted Mode. Only the developer's YNAB account can authorize during this period. See [YNAB OAuth documentation](https://api.youneedabudget.com/#oauth-applications).
+
+**Tools return no data / empty results**
+Ensure your YNAB budget has data for the requested month. Default budget is "last-used" — if you have multiple budgets, confirm which is active via `ynab_get_budget_settings`.
+
+**Server not reachable**
+If self-hosting, verify your tunnel (ngrok) is running and the `BASE_URL` env var matches the public URL. Check `pm2 status` and `pm2 logs ynab-mcp-http`.
+
+**OAuth callback fails**
+Ensure the redirect URI registered in your YNAB OAuth app matches `{BASE_URL}/oauth/callback`.
+
+For other issues, open a GitHub issue: https://github.com/amitpatnaik/ynab-mcp-server/issues
+
+## Legal
+
+- [Privacy Policy](PRIVACY.md)
+- [Terms of Service](TERMS.md)
+
 ## License
 
 MIT
