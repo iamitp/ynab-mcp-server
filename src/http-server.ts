@@ -163,8 +163,8 @@ app.delete("/mcp", (_req, res) => {
 
 const PORT = parseInt(process.env.PORT ?? "3002", 10);
 
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`[ynab-mcp-http] Listening on http://0.0.0.0:${PORT}`);
+app.listen(PORT, "127.0.0.1", () => {
+  console.log(`[ynab-mcp-http] Listening on http://127.0.0.1:${PORT}`);
   console.log(`[ynab-mcp-http] OAuth discovery: ${BASE_URL}/.well-known/oauth-authorization-server`);
   console.log(`[ynab-mcp-http] MCP endpoint:    POST ${BASE_URL}/mcp`);
   console.log(`[ynab-mcp-http] Health check:    GET  ${BASE_URL}/health`);
